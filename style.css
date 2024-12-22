@@ -1,6 +1,7 @@
 :root{
     --clr-color-background: #f5abf4 ;
     --clr-white: #fff;
+    --clr-color: rgb(212, 89, 89);
 }
 *{
     margin: 0px;
@@ -96,54 +97,7 @@ html{
     font-size: 17px;
     cursor: pointer;
 }
- /*.cartTab{
-    background-color:  var(--clr-color-background);
-    color:var(--clr-white);
-    width: 400px;
-    max-width: 100%;
-    position: fixed;
-    top: 116px;
-    right: 0;
-    bottom: 0;
-    display: grid;
-    grid-template-rows: 70px 1fr 40px;
-}
-/*.cartTab h1{
-    padding: 20px;
-    margin: 0;
-    font-weight: 300;
-}
-.cartTab .btn{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.cartTab .btn button{
-    background-color: #f58fb1;
-    border: none;
-    font-family: poppins;
-    font-weight: 500;
-    font-size: 15px;
-}
-.cartTab .btn button.close{
-    background-color:white;
-}
-
-.cartTab .listCart{
-    overflow: auto;
-}
-.cartTab ,.listCart::-webkit-scrollbar{
-    width: 0;
-}
-.cartTab{
-    right: -400px;
-    transition: 0.5s;
-}
-body.activeTabCard .cartTab{
-    right: 0;
-}
-body.activeTabCard .container{
-    transform: translateX(-250px);
-} */
+ 
 /* -----Hero section---- */
 .home{
     width: 100%;
@@ -273,29 +227,39 @@ body.activeTabCard .container{
 color: green;
 }
 /* ===add to item start */
+#contener_div{
+    /* background-image: url("https://t3.ftcdn.net/jpg/10/99/18/32/360_F_1099183260_spcCsyWaR13N4m3PdHCHXypZG5jgi3Jy.jpg"); */
+    /* background-image:url("https://img.freepik.com/premium-photo/pink-background-with-bunch-flowers-it_954894-189263.jpg") ; */
+    background-image: url("https://img.freepik.com/premium-photo/bouquet-white-roses-with-pink-flowers-pink-background_1000124-12393.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin-top: 117px;
+    
+}
 .add_product{
-    margin: 200px 00px 100px 150px;
+    margin: 30px 00px 0px 120px;
     display: flex;
     justify-content: center;    
     align-items: center;
     flex-direction: column; 
-    background-color:var(--clr-white);
-    height: 300px;
-    width: 500px;
+    height: 350px;
+    width: 800px;
     box-shadow: 0 0 10px var(--clr-info-dark);
     border-radius: 10px;
 }
 #add_product_boby{
+    margin: 20px 00px 0px 120px;
     font-family: "Poppins", serif;
     width: 100vw;
     height: 100vh;
     font-size: 0.88rem;
     user-select: none;
     overflow-x: hidden;
-    /* background-color: var(--clr-info-light); */
 }
+
 .add_product h1{
-    color: #2563eb;
+    color: var(--clr-color)
 }
 .add_product div{
     margin: 20px;
@@ -305,35 +269,72 @@ color: green;
 }
 .add_product div input{
     height: 35px;
-    width: 200px;
+    width: 450px;
     margin-left: 12px;
     box-shadow: var(--box-shadow);
     transition: all .1s ease;
     border: none;
-    background-color: rgb(221, 219, 219);
+    background-color: rgb(245, 173, 195);
     border-radius: 10px;
 }
 
 .add_product div #Price{
-    margin-left: 24px;
+    margin-left: 20px;
 }
 #btn_save_data{
-    height: 30px;
-    width: 100px;
-    margin-left: 100px;
-    border-radius: var(--border-radius-1);
+    height: 35px;
+    width: 150px;
+    margin-left: 200px;
+    border-radius: 5px;
     box-shadow: var(--box-shadow);
     transition: all .1s ease;
+    border-style: none;
     font-size: 1rem;
-    cursor: grab;
-    color: #000305;
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--clr-color);
 }
 #btn_save_data:hover{
-    background-color:#2563eb;
+    background-color:var(--clr-color);
     color: white;
 
 }
 /* Add to item end */
+/* ====Table section start==== */
+.recent_order{
+   background-color: rgb(245, 173, 195);
+    height: auto;
+   width: 80vw;
+   text-align: center;
+   margin-left:50PX ;
+   
+}
+.recent_order h1{
+color: var(--clr-color);
+}
+.recent_order table{ 
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    /* transition: all .3s ease; */
+    color: var(--clr-dark);
+}
+.recent_order table:hover{
+    box-shadow: none;
+}
+.recent_order table thead th{
+    height: 2rem;
+    border-bottom: 1px solid var(--clr-color);  
+}
+.recent_order table tbody td{
+    height: 2.5rem;
+    border-bottom: 1px solid var(--clr-color);
+}
+.recent_order table tbody tr:last-child td{
+    border: none;
+
+}
 
 /* ============================Footer Section Start======================== */
 
