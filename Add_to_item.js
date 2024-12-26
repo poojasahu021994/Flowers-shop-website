@@ -75,3 +75,8 @@ async function myedit(id){
     })
     .then(r=>alert("update....!!!"))
 }
+
+// ========Add to cart start================
+let label = document.querySelector('#label')
+let shoppingCart = document.querySelector('#shoping_cart')
+let basket = JSON.parse(localStorage.getItem('data')) || []
