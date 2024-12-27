@@ -80,3 +80,35 @@ async function myedit(id){
 let label = document.querySelector('#label')
 let shoppingCart = document.querySelector('#shoping_cart')
 let basket = JSON.parse(localStorage.getItem('data')) || []
+
+let calculate =()=>{
+   let cart_icon=document.getElementById('add_card')
+   let cart_amount =basket.length
+   cart_icon.innerHTML=cart_amount
+
+}
+calculate();
+
+let genrate_Cart_item=()=>{
+   if(basket.length!==0){
+    return(shoppingCart.innerHTML=basket.map((x)=>{
+      let {id,Name,Price,imageurl,item,Update}= x;
+      return `
+      <div class="cart_item">
+      <div class="pera"><p>${Name}</p></div>
+      <div class ="cart_item_img">
+      <img src="${imageurl}" alt=""/>
+      </div>
+       <p>${Price}</p>
+       <button onclick="remove_from_cart${id}">Remove</button>
+
+      </div>
+      `
+    }).join("")
+   )
+   }
+}
+genrate_Cart_item();
+
+
+
