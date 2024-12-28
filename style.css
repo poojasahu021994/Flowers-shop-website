@@ -134,6 +134,7 @@ html{
 .home .detail h1{
     font-size: 3rem;
     margin: 1rem 2rem;
+    color: #5c5858;
 }
 .home .detail  div{
     color: #2e2d2d;
@@ -346,10 +347,13 @@ color: var(--clr-color);
     /* background-image:url("https://img.freepik.com/premium-photo/beautiful-rose-flower-bouquet-plain-pastel-color-background-with-copy-space_333547-14909.jpg") ; */
     background-repeat: no-repeat;
     background-size: cover;
+} #Cart_page img{
+    /* position: absolute; */
+    /* margin-left: 500px; */
 }
 .cart_item_img img{
     align-items: center;
-    width:120px;
+    width:120px;   
 }
 .pera{
     height: 20px;
