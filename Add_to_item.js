@@ -21,11 +21,6 @@ fet_data()
 
 // Delete 
 function mydelete(id){
-
-
-
-
-
     fetch(`http://localhost:3000/product/${id}`,{
      method:'DELETE'
     })
@@ -33,6 +28,8 @@ function mydelete(id){
  }
 //  Insert
  
+
+
  function insertdata(){
     let data = {
        imageurl:document.querySelector('#img').value,
