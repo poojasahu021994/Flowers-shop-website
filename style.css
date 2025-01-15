@@ -340,16 +340,21 @@ color: var(--clr-color);
 /* .Shopping-cart{
     margin: 200px;  
 } */
+#maindiv_cartSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(233, 185, 185);
+}
 #Cart_page{
     margin-top: 100px;  
     padding: 20px 50px;
-    background-color:rgb(233, 185, 185) ;
-    /* background-image:url("https://img.freepik.com/premium-photo/beautiful-rose-flower-bouquet-plain-pastel-color-background-with-copy-space_333547-14909.jpg") ; */
-    background-repeat: no-repeat;
-    background-size: cover;
-} #Cart_page img{
-    /* position: absolute; */
-    /* margin-left: 500px; */
+
+    
+}
+#img_style img{
+    height: auto;
+    width: 600px;
 }
 .cart_item_img img{
     align-items: center;

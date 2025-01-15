@@ -15,10 +15,17 @@ async function fet_data(){
 
     document.querySelector('#showdata').innerHTML=final_data
 }
+
+
 fet_data()
 
 // Delete 
 function mydelete(id){
+
+
+
+
+
     fetch(`http://localhost:3000/product/${id}`,{
      method:'DELETE'
     })
@@ -29,6 +36,7 @@ function mydelete(id){
  function insertdata(){
     let data = {
        imageurl:document.querySelector('#img').value,
+       
        Name:document.querySelector('#name').value,
        Price:document.querySelector('#Price').value,
        Update:document.querySelector('#Status').value
@@ -109,6 +117,15 @@ let genrate_Cart_item=()=>{
    }
 }
 genrate_Cart_item();
+
+let remove_from_cart = (id) =>{
+   basket =basket.filter((x)=> x.id !=id)
+   localStorage.setItem('data',JSON.stringify(basket))
+   calculate()
+   genrate_Cart_item()
+}
+
+//totel function
 
 
 
