@@ -239,12 +239,12 @@ color: green;
     
 }
 .add_product{
-    margin: 30px 00px 0px 120px;
+    margin: 100px 00px 0px 120px;
     display: flex;
     justify-content: center;    
     align-items: center;
     flex-direction: column; 
-    height: 350px;
+    height: 450px;
     width: 800px;
     box-shadow: 0 0 10px var(--clr-info-dark);
     border-radius: 10px;

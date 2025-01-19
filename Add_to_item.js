@@ -33,7 +33,7 @@ function mydelete(id){
  function insertdata(){
     let data = {
        imageurl:document.querySelector('#img').value,
-       
+       Reviews:document.querySelector('#review'),
        Name:document.querySelector('#name').value,
        Price:document.querySelector('#Price').value,
        Update:document.querySelector('#Status').value
