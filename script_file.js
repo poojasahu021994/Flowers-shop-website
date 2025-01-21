@@ -21,6 +21,7 @@
 // }
 // genrateCard()
 
+// 
 let basket=JSON.parse(localStorage.getItem('data')) || []
 
 async function fet_data(){
@@ -53,13 +54,10 @@ async function fet_data(){
     localStorage.setItem('data',JSON.stringify(basket))
     calculate()
 }
-
 let calculate =()=>{
     let cart_icon=document.getElementById('add_card')
     let cart_amount =basket.length
 
     cart_icon.innerHTML=cart_amount
-
 }
-
 fet_data()

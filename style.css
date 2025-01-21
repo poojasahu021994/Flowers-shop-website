@@ -1,3 +1,6 @@
+
+
+
 :root{
     --clr-color-background: #f5abf4 ;
     --clr-white: #fff;
@@ -10,6 +13,12 @@
 
 }
 body{
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
     overflow-x: hidden;
 }
 html{
@@ -218,6 +227,7 @@ html{
     height: 25px;
     width: 100px;
     border: none;
+    cursor: pointer;
     
 }
 .shop .flower_item button:hover{
@@ -374,7 +384,83 @@ color: var(--clr-color);
     margin: 10px 0;
 }
 
+/* Totel price section */
+.tatal_amount_area{
+    margin-left: 300px;
+}
+.tatal_amount_area button{
+    padding: 10px 0px;
+    width: 70%;
+    cursor: pointer;
+    font-size: 20px;
+    background-color:rgb(212, 89, 89) ;
+    color: #fff;
+    transition: .5s ease-in;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(235, 227, 231, 0.10);
+}
+.tatal_amount_area button:hover{
+    background: transparent;
+    color: #2e2d2d;
+    border: 1px solid rgb(212, 89, 89);
+}
 
+
+
+/* media query section */
+
+@media screen and (max-width:768px) {
+    .Main_navbar ul li ul li a{
+        margin: 15px;
+        font-size: 16px;
+    }
+    .Main_navbar ul li img {
+        height: 60px;
+        width: 80px;
+    }
+    .home .detail span{
+        font-size:30px;
+    }
+    .home .detail h1{
+        font-size: 2.2rem;
+    }
+    .home .detail  div{
+        font-size: 15px;
+        font-weight: 400;
+        width: 400px;
+    }
+    .home .detail .btn{
+        width: 80px;  
+    }
+    .shop{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+    .shop .flower_item{
+        width: 200px;
+    }
+    
+}
+@media screen and (max-width:425px){
+    .shop{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .shop{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        margin-left: 35px;
+    }
+}
 /* ============================Footer Section Start======================== */
 
 

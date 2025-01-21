@@ -1,3 +1,4 @@
+
 async function fet_data(){
     let res = await fetch("http://localhost:3000/product")
     let data = await res.json();
@@ -62,9 +63,11 @@ async function myedit(id){
      <button id="btn_save" onclick="finalupdate('${redata.id}')">Submit</button>
    
      </div>
+     
     `
     document.querySelector('#edittable').innerHTML = senddata
  }
+
  function finalupdate(id){
     let fdata={    
         imageurl :document.querySelector('#img1').value,
@@ -81,7 +84,7 @@ async function myedit(id){
     .then(r=>alert("update....!!!"))
 }
 
-// ========Add to cart start================
+// ========Add to cart section start================
 let label = document.querySelector('#label')
 let shoppingCart = document.querySelector('#shoping_cart')
 let basket = JSON.parse(localStorage.getItem('data')) || []
@@ -105,7 +108,7 @@ let genrate_Cart_item=()=>{
       <img src="${imageurl}" alt=""/>
       </div>
        <p>${Price}</p>
-       <button onclick="remove_from_cart${id}">Remove</button>
+       <button onclick="remove_from_cart(${id})">Remove</button>
 
       </div>
       `
@@ -116,13 +119,26 @@ let genrate_Cart_item=()=>{
 genrate_Cart_item();
 
 let remove_from_cart = (id) =>{
+   // alert(id)
    basket =basket.filter((x)=> x.id !=id)
    localStorage.setItem('data',JSON.stringify(basket))
    calculate()
    genrate_Cart_item()
+
 }
 
 //totel function
-
-
+ let Totel_amount =()=>{
+   let total_amount=0
+   basket.map((item)=>{
+      total_amount+=item.item*item.Price
+   })
+   label.innerHTML=`
+   <div class="tatal_amount_area">
+   <h2>Totel Price : ${total_amount}</h2>
+   <button class="update" onclick=window.location.reload()>Update</button>
+   <button class="checkout">Checkout</button>
+   </div>`
+ }
+ Totel_amount ();
 
