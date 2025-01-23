@@ -27,6 +27,7 @@ let basket=JSON.parse(localStorage.getItem('data')) || []
 async function fet_data(){
     let res = await fetch("http://localhost:3000/product")
     let data = await res.json();
+    
     console.log(data)
     let final_data=data.map((t)=>`
           
